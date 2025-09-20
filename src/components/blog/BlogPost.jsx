@@ -1,7 +1,8 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import bloglist from "../../data/blog";
-const BlogPost = ({ match }) => {
-  const { id } = match.params;
+const BlogPost = () => {
+  const { id } = useParams();
   const post = bloglist[id];
 
   return (

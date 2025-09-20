@@ -82,7 +82,7 @@ const App = () => {
   const titleRef = React.useRef();
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       {navBar.show && <Navbar ref={titleRef} />}
       
       <Routes>
