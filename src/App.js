@@ -82,12 +82,12 @@ const App = () => {
   const titleRef = React.useRef();
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       {navBar.show && <Navbar ref={titleRef} />}
       
       <Routes>
-        <Route path="/" exact element={<Home ref={titleRef} />} />
-        <Route path="/blog" exact element={<Blog />} />
+        <Route path="/" element={<Home ref={titleRef} />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
       <Footer>
