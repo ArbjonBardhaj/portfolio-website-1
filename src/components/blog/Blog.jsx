@@ -32,7 +32,7 @@ const BlogCard = ({ index, title, description }) => {
             <div className="">
               <h1 className="">{title}</h1>
               <p className="lead">{description}</p>
-              <Link to={`${process.env.PUBLIC_URL}blog/${index}`}>
+              <Link to={`/blog/${index}`}>
                 Read more...{" "}
               </Link>
             </div>
@@ -44,5 +44,5 @@ const BlogCard = ({ index, title, description }) => {
   );
 };
 
-const components = { Blog, BlogBuilder };
-export default components;
+export default Blog;
+export { BlogBuilder };
